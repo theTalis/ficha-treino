@@ -7,7 +7,7 @@ interface ButtonProps extends IButtonProps {
   color?: string;
 }
 
-export function Botao({ children, autoSize = false, color, ...rest }: ButtonProps){
+export function PrimaryButton({ children, autoSize = false, color, ...rest }: ButtonProps){
 
   return (
     <Button
