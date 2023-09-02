@@ -1,7 +1,8 @@
-const users = [
+const profiles = [
   {
     id: "user1",
-    token: "adwawdawdawd"
+    token: "adwawdawdawd",
+    image: "https://github.com/theTalis.png"
   }
 ]
 
@@ -110,4 +111,4 @@ const workouts = [
   }
 ]
 
-export { users, divisions, exercises, workouts }
+export { profiles, divisions, exercises, workouts }

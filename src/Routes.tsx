@@ -6,6 +6,7 @@ const Tab = createNativeStackNavigator();
 
 import Login from "./Login";
 import Tabs from "./Tabs";
+import Exercise from "./Exercise";
 
 export default function Routes(){
   return(
@@ -16,6 +17,9 @@ export default function Routes(){
         />
         <Tab.Screen 
           name="Tabs" component={Tabs as React.FC} options={{ headerShown: false }}
+        />
+        <Tab.Screen 
+          name="Exercise" component={Exercise as React.FC} options={{ headerShown: false }}
         />
       </Tab.Navigator>
     </NavigationContainer>

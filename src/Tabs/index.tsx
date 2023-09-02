@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import Principal from "./Principal";
+import Profile from "./Profile";
 
 const Tab = createBottomTabNavigator()
 
@@ -18,6 +19,11 @@ const tabs = [
     name: 'Principal',
     component: Principal,
     icon: 'home'
+  },
+  {
+    name: 'Profile',
+    component: Profile,
+    icon: 'person'
   },
 ]
 

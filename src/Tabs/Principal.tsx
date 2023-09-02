@@ -1,40 +1,33 @@
-import { VStack, Image, Box, ScrollView, Text, Divider, Input } from "native-base";
-import { PrimaryButton } from "../components/PrimaryButton";
-import { InputText } from "../components/InputText";
+import { VStack, Box, ScrollView, Text, Divider, Input } from "native-base";
+import { TouchableOpacity } from 'react-native';
 import { Title } from "../components/Title";
-import { exercises } from "../utils/mock";
+import { divisions } from "../utils/mock";
 
-export default function Principal(){
+export default function Principal({ navigation }: any){
+
+  function openExercises(divisionId: number) {
+    navigation.navigate('Exercise', { divisionId: divisionId })
+  }
+
   return (
     <ScrollView flex={1} bgColor="white">
-      <VStack flex={1} alignItems="flex-start" justifyContent="flex-start" p={5}>
-        <Title color="blue.500">Boas-vindas!</Title>
-
-        <Box w="100%" borderRadius="lg" p={3} mt={10} shadow="1" borderRightRadius="md">
-          <InputText
-            placeholder="Digite a especialidade"
-          />
-          <InputText
-            placeholder="Digite sua localização"
-          />
-          <PrimaryButton mt={3} mb={3}>
-            Buscar
-          </PrimaryButton>
-        </Box>
-
-        <Title color="blue.800" alignSelf="center">Depoimentos</Title>
-        <VStack space={3} divider={<Divider />} w="100%">
+      <VStack flex={1} alignItems="center" p={5}>
+        <Title color="blue.800" pt={5} alignSelf="center">Workouts</Title>
+        <Divider mt={5} />
+        <VStack space={2} divider={<Divider />} w="100%">
           {
-            exercises.map(exercise => (
-              <Box key={exercise.id} w="100%" borderRadius="lg" p={3}>
-                <Text color="gray.300" fontSize="md" textAlign="justify">
-                  {exercise.title}
-                </Text>
-                <Text color="gray.500" fontSize="lg" fontWeight="bold" alignSelf="center" mt="2">{exercise.title}</Text>
-              </Box>
+            divisions.map(division => (
+              <VStack key={division.id}>
+                <TouchableOpacity onPress={() => openExercises(division.id)}>
+                  <Box w="100%" borderRadius="lg" p={3}>
+                    <Text color="gray.500" fontSize="md" fontWeight="bold" alignSelf="center" mt="2">{division.title}</Text>
+                  </Box>
+                </TouchableOpacity>
+              </VStack>
             ))
           }
         </VStack>
+        <Divider mt={5} />
       </VStack>
     </ScrollView>
   );

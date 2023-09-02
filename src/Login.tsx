@@ -16,6 +16,7 @@ export default function Login({ navigation } : NavigationProps<'Login'>) {
 
   useEffect(() => {
     setLoading(false)
+    navigation.replace('Tabs')
     // async function verifyLogin(){
     //   const token = await AsyncStorage.getItem('token')
     //   if(token){
