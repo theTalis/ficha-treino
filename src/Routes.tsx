@@ -7,7 +7,7 @@ const Tab = createNativeStackNavigator();
 import Login from "./Login";
 import Tabs from "./Tabs";
 
-export default function Rotas(){
+export default function Routes(){
   return(
     <NavigationContainer>
       <Tab.Navigator>
