@@ -1,14 +1,14 @@
-import { VStack, Box, ScrollView, Text, Divider, Input } from "native-base";
-import { TouchableOpacity } from 'react-native';
+import { VStack, Box, ScrollView, Text, Divider, Image } from "native-base";
 import { Title } from "./components/Title";
-import { exercises } from "./utils/mock";
-import { workouts } from "./utils/mock";
+import { exercises, workouts, profiles } from "./utils/mock";
 
 export default function Exercise({ route, navigation }: any) {
     const { divisionId } = route.params
     const exercise = exercises.filter((division) => division.id === divisionId)[0];
 
     const workout = workouts.filter((exercise) => exercise.id === exercise.id)[0];
+
+  const profile = profiles[0]
 
     return (
         <ScrollView flex={1} bgColor="white">
@@ -25,6 +25,9 @@ export default function Exercise({ route, navigation }: any) {
                 </Box>
                 <Box w="100%" borderRadius="lg" p={3}>
                     <Text color="gray.500" fontSize="md" fontWeight="bold" alignSelf="center" mt="2">Reps {workout.reps}</Text>
+                </Box>
+                <Box w="100%" h="500">
+                    <Image flex={1} resizeMode="contain" source={{ uri: exercise.image }} alt="exercise" />
                 </Box>
             </VStack>
             </VStack>
