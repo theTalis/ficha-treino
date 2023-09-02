@@ -6,17 +6,17 @@ const Tab = createNativeStackNavigator();
 
 // import Cadastro from "./Cadastro";
 import Login from "./Login";
-// import Tabs from "./Tabs";
+import Tabs from "./Tabs";
 // import Agendamento from "./Agendamento";
 
 export default function Rotas(){
   return(
     <NavigationContainer>
       <Tab.Navigator>
-        {/* <Tab.Screen 
+        {<Tab.Screen 
           name="Login" component={Login as React.FC} options={{ headerShown: false }}
         />
-        <Tab.Screen 
+        /*<Tab.Screen 
           name="Cadastro" component={Cadastro as React.FC} options={{ headerShown: false }}
         />
         <Tab.Screen 

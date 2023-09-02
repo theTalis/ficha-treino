@@ -5,109 +5,109 @@ const users = [
   }
 ]
 
-const divisoes = [
+const divisions = [
   {
     id: 1,
-    titulo: 'Peito',
+    title: 'Peito',
   },
   {
     id: 2,
-    titulo: 'Costas',
+    title: 'Costas',
   },
   {
     id: 3,
-    titulo: 'Perna',
+    title: 'Perna',
   },
   {
     id: 4,
-    titulo: 'Bíceps',
+    title: 'Bíceps',
   },
   {
     id: 5,
-    titulo: 'Tríceps',
+    title: 'Tríceps',
   },
   {
     id: 6,
-    titulo: 'Ombro',
+    title: 'Ombro',
   },
 ]
 
-const exercicios = [
+const exercises = [
   {
     id: 1,
-    titulo: "Supino reto com halteres",
+    title: "Supino reto com halteres",
     image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/supino-reto-com-halteres.gif",
-    divisao: 1
+    division: 1
   },
   {
     id: 2,
-    titulo: "Remada baixa",
+    title: "Remada baixa",
     image: "https://www.mundoboaforma.com.br/wp-content/uploads/2021/09/remada-sentado-com-cabos-e-triangulo-para-costas.gif",
-    divisao: 2,
+    division: 2,
   },
   {
     id: 3,
-    titulo: "Legpress",
+    title: "Legpress",
     image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/pernas-leg-press-45-tradicional.gif",
-    divisao: 3,
+    division: 3,
   },
   {
     id: 4,
-    titulo: "Rosca halteres",
+    title: "Rosca halteres",
     image: "https://www.mundoboaforma.com.br/wp-content/uploads/2022/09/rosca-biceps-direta-com-halteres.gif",
-    divisao: 4,
+    division: 4,
   },
   {
     id: 5,
-    titulo: "Triceps pulley",
+    title: "Triceps pulley",
     image: "https://www.mundoboaforma.com.br/wp-content/uploads/2021/07/triceps-puxada-no-pulley.gif",
-    divisao: 5,
+    division: 5,
   },
   {
     id: 6,
-    titulo: "Elevação lateral",
+    title: "Elevação lateral",
     image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/ombros-elevacao-lateral-de-ombros-com-halteres.gif",
-    divisao: 6,
+    division: 6,
   },
 ]
 
-const treinos = [
+const workouts = [
   {
     id: 1,
-    exercicio: 1,
+    exercise: 1,
     series: 4,
-    repeticoes: 13
+    reps: 13
   },
   {
     id: 2,
-    exercicio: 2,
+    exercise: 2,
     series: 4,
-    repeticoes: 13
+    reps: 13
   },
   {
     id: 3,
-    exercicio: 3,
+    exercise: 3,
     series: 4,
-    repeticoes: 13
+    reps: 13
   },
   {
     id: 4,
-    exercicio: 4,
+    exercise: 4,
     series: 4,
-    repeticoes: 13
+    reps: 13
   },
   {
     id: 5,
-    exercicio: 5,
+    exercise: 5,
     series: 4,
-    repeticoes: 13
+    reps: 13
   },
   {
     id: 6,
-    exercicio: 6,
+    exercise: 6,
     series: 4,
-    repeticoes: 13
+    reps: 13
   }
 ]
 
-export { users, divisoes, exercicios, treinos }
+export { users, divisions, exercises, workouts }

@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-// import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
-// import Principal from "./Principal";
+import Principal from "./Principal";
 // import Consultas from "./Consultas";
 // import Explorar from "./Explorar";
 // import Perfil from "./Perfil";
@@ -17,11 +17,11 @@ const screenOptions = {
 }
 
 const tabs = [
-  // {
-  //   name: 'Principal',
-  //   component: Principal,
-  //   icon: 'home'
-  // },
+  {
+    name: 'Principal',
+    component: Principal,
+    icon: 'home'
+  },
   // {
   //   name: 'Consultas',
   //   component: Consultas,
@@ -40,22 +40,22 @@ const tabs = [
 ]
 
 export default function Tabs() {
-  // return (
-  //   <Tab.Navigator screenOptions={screenOptions}>
-  //     {tabs.map((tab) => (
-  //       <Tab.Screen
-  //         key={tab.name}
-  //         name={tab.name}
-  //         component={tab.component}
-  //         options={{
-  //           headerShown: false,
-  //           tabBarIcon: ({ color, size }) => (
-  //             <Ionicons name={tab.icon} color={color} size={size} />
-  //           )
-  //         }}
-  //       />
-  //     ))
-  //     }
-  //   </Tab.Navigator>
-  // )
+  return (
+    <Tab.Navigator screenOptions={screenOptions}>
+      {tabs.map((tab) => (
+        <Tab.Screen
+          key={tab.name}
+          name={tab.name}
+          component={tab.component}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name={tab.icon} color={color} size={size} />
+            )
+          }}
+        />
+      ))
+      }
+    </Tab.Navigator>
+  )
 }
