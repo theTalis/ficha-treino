@@ -1,22 +1,23 @@
 import { VStack, Image, Text, Box, Link, useToast } from 'native-base'
 import { TouchableOpacity } from 'react-native';
-import { PrimaryButton } from './components/PrimaryButton';
-import { InputText } from './components/InputText';
-import { Title } from './components/Title';
+import { PrimaryButton } from '../components/PrimaryButton';
+import { InputText } from '../components/InputText';
+import { Title } from '../components/Title';
 import { useEffect, useState } from 'react';
-import { createLogin } from './services/Auth.service';
+import { createLogin } from '../services/Auth.service';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import jwtDecode from 'jwt-decode';
-import { NavigationProps } from './@types/navigation';
+import { NavigationProps } from '../@types/navigation';
 
 export default function Login({ navigation } : NavigationProps<'Login'>) {
   const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(true)
   const toast = useToast()
 
   useEffect(() => {
     setLoading(false)
-    navigation.replace('Tabs')
+    // navigation.replace('Tabs')
     // async function verifyLogin(){
     //   const token = await AsyncStorage.getItem('token')
     //   if(token){
@@ -63,8 +64,24 @@ export default function Login({ navigation } : NavigationProps<'Login'>) {
           value={username}
           onChangeText={setUsername}
         />
+        <InputText
+          label="Password"
+          placeholder="Fill with password"
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry
+        />
       </Box>
       <PrimaryButton onPress={login}>Sign In</PrimaryButton>
+
+      <Box w="100%" flexDirection="row" justifyContent="center" mt={8}>
+        <Text>Do not have login? </Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+          <Text color="blue.500">
+            Sign up!
+          </Text>
+        </TouchableOpacity>
+      </Box>
     </VStack>
   );
 }

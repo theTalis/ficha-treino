@@ -4,9 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Tab = createNativeStackNavigator();
 
-import Login from "./Login";
+import Login from "./screens/Login";
 import Tabs from "./Tabs";
-import Exercise from "./Exercise";
+import Exercise from "./screens/Exercise";
+import Signup from "./screens/Signup";
 
 export default function Routes(){
   return(
@@ -20,6 +21,9 @@ export default function Routes(){
         />
         <Tab.Screen 
           name="Exercise" component={Exercise as React.FC} options={{ headerShown: false }}
+        />
+        <Tab.Screen 
+          name="Signup" component={Signup as React.FC} options={{ headerShown: false }}
         />
       </Tab.Navigator>
     </NavigationContainer>

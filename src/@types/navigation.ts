@@ -7,6 +7,7 @@ export type ListaTelas = {
   Principal: undefined;
   Profile: undefined;
   Tabs: undefined;
+  Signup: undefined;
 }
 
 export type NavigationProps< T extends keyof ListaTelas > = {

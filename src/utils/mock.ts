@@ -1,6 +1,7 @@
 const profiles = [
   {
     id: "user1",
+    password: "1234",
     token: "adwawdawdawd",
     image: "https://github.com/theTalis.png"
   }
@@ -68,6 +69,42 @@ const exercises = [
     id: 6,
     title: "Elevação lateral",
     image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/ombros-elevacao-lateral-de-ombros-com-halteres.gif",
+    division: 6,
+  },
+  {
+    id: 7,
+    title: "Supino inclinado",
+    image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/supino-inclinado-com-halteres.gif",
+    division: 1
+  },
+  {
+    id: 8,
+    title: "Puxada aberta",
+    image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/costas-puxada-aberta-com-barra-no-pulley.gif",
+    division: 2,
+  },
+  {
+    id: 9,
+    title: "Agachamento rack",
+    image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/11/agachamento-no-rack.gif",
+    division: 3,
+  },
+  {
+    id: 10,
+    title: "Rosca unilateral",
+    image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/11/Rosca-Scott-com-halteres-unilateral.gif",
+    division: 4,
+  },
+  {
+    id: 11,
+    title: "Triceps testa",
+    image: "https://www.mundoboaforma.com.br/wp-content/uploads/2021/03/rosca-triceps-testa-deitado-no-banco-com-barra-tradicional.gif",
+    division: 5,
+  },
+  {
+    id: 12,
+    title: "Voador invertido",
+    image: "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/ombros-voador-invertido-na-maquina.gif",
     division: 6,
   },
 ]
