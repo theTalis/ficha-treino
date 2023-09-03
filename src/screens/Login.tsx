@@ -8,6 +8,7 @@ import { createLogin } from '../services/Auth.service';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import jwtDecode from 'jwt-decode';
 import { NavigationProps } from '../@types/navigation';
+import Logo from '../assets/Logo.jpg'
 
 export default function Login({ navigation } : NavigationProps<'Login'>) {
   const [username, setUsername] = useState('')
@@ -54,8 +55,10 @@ export default function Login({ navigation } : NavigationProps<'Login'>) {
 
   return (
     <VStack flex={1} alignItems="center" justifyContent="center" p={5}>
+      <Image source={Logo} h="60" w="60" mt={10} alt="Logo Voll" alignSelf="center" />
+
       <Title>
-        Username
+        Ficha de treino
       </Title>
       <Box>
         <InputText
